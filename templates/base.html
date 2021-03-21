@@ -1,0 +1,24 @@
+<!doctype html>
+    <head>
+        <title>Network Tools</title>
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <form class="form-inline">
+                <a class="nav-link" href="/">Home</a>
+                <div>
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Config Tools</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item"  href="{{ url_for('buildinterface') }}">Builde Interface</a>
+                  </div>
+                </div>
+             </form> 
+        </nav>
+          <script src="static/js/vendor/jquery/jquery-3.4.1.slim.min.js"></script>
+          <script src="static/js/vendor/popper//popper.min.js"></script>
+          <script src="static/js/vendor/bootstrap/bootstrap.min.js"></script>      
+          {% block content %}
+          {% endblock %}     
+    </body>
+</html>

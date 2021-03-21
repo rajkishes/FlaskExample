@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="POST" action="/buildinterface">
+    {{ form.interface_name.label }} {{ form.interface_name() }}<br>
+    {{ form.description.label }} {{ form.description() }}<br>
+    {{ form.vlan.label }} {{ form.vlan() }}<br>
+    {{ form.ip_address.label }} {{ form.ip_address() }}<br>
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

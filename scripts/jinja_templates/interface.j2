@@ -1,0 +1,6 @@
+interface {{ variables.interface_name }}
+ description {{ variables.description }}
+ encapsulation dot1q {{ variables.vlan }}
+ ip address {{ variables.ip_address }} 255.255.255.0
+ service-policy output voice_qos
+ ip access-group keep_out in
