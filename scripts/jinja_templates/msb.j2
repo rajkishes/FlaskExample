@@ -1,11 +1,11 @@
-hostname {{ hostname }}
+hostname {{ variables.host_name }}
 !
-ip domain name {{ domain_name }}
+ip domain name {{ variables.domain_name }}
 !
-ntp server {{ ntp_01 }} prefer
-ntp server {{ ntp_02 }}
+ntp server {{ variables.ntp_01 }} prefer
+ntp server {{ variables.ntp_02 }}
 !
 interface GigabitEthernet0/0
- ip address {{ management_ip }}
+ ip address {{ variables.management_ip }}
  negotiation auto
 !
