@@ -6,6 +6,17 @@ ntp server {{ variables.ntp_01 }} prefer
 ntp server {{ variables.ntp_02 }}
 !
 interface GigabitEthernet0/0
- ip address {{ variables.management_ip }}
+ ip address {{ variables.management_ip }} 255.255.255.128
  negotiation auto
 !
+!
+line con 0
+ exec-timeout 5 0
+ logging synchronous
+line vty 0 4
+ transport input ssh
+ access-class 10 in
+line vty 5 15
+ transport input ssh
+ access-class 10 in
+ !
