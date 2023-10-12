@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="POST" action="/buildmsb">
+    {{ form.host_name.label }} {{ form.host_name() }}<br>
+    {{ form.domain_name.label }} {{ form.domain_name() }}<br>
+    {{ form.ntp_01.label }} {{ form.ntp_01() }}<br>
+    {{ form.ntp_02.label }} {{ form.ntp_02() }}<br>
+    {{ form.management_ip.label }} {{ form.management_ip() }}<br>
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

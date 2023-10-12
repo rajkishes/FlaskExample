@@ -15,5 +15,13 @@ def buildinterface():
         return(f'<pre>{config}</pre>')
     return render_template('buildinterface.html', form=form)
 
+@app.route('/buildmsb', methods=["GET", "POST"])
+def buildmsb():
+    form = forms.buildmsb_form(request.form)
+    if request.method == 'POST' and form.validate():
+        config = build.build_msb(**form.data)
+        return(f'<pre>{config}</pre>')
+    return render_template('buildmsb.html', form=form)
+
 if __name__ == "__main__":
     app.run()
